@@ -1,0 +1,512 @@
+/*=====================================================
+        Template Name: Paul-Lapkin
+        Template URL:#
+        Authour Name:Rafiul Alam
+        Authour Url:#
+        Template Vershion:1.0
+        Description:This is a simple static Site
+=====================================================*/
+
+
+/*====================================================
+                   CSS Index
+        1.Fonts
+        2.Common Css
+        3.Reuslable Component
+        4.hero
+        5.About
+        6.Work
+        7.Experience
+        8.Portfolio
+        9.Quote
+        10.Contact
+        11.Footer
+        12.Responsive(@meadia query)
+=====================================================*/
+
+/*=============================================
+                Fonts
+=============================================*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+
+/*=============================================
+                Common Csss
+=============================================*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html, body{
+    color: #000;
+    background-color: #fff;
+    font-weight:400;
+    font-size:62.5%;
+    font-family: 'Roboto', sans-serif;
+    text-rendering: optimizeLegibility;
+    line-height:1.5;
+}
+p{
+    font-size:1.6rem;
+    color:#000;
+    background-color: #fff;
+    line-height:1.5;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+a:link{
+    text-decoration: none;
+}
+
+/*=============================================
+                Reusable Component
+=============================================*/
+.container{
+    max-width:118rem;
+    margin:auto;
+}
+section{
+    padding:9rem 0;
+}
+.clearfix::after{
+    content: '';
+    display:block;
+    clear:both;
+}
+.btn{
+    color:#ffff;
+    background-color: #FE2B4A;
+    font-size:1.7rem;
+    padding:1.5rem 0;
+    width:20rem;
+    display:inline-block;
+    text-transform: uppercase;
+    text-align: center;
+    border:.2rem solid #FE2B4A;
+    cursor: pointer;
+    transition:1s ease-in-out;
+
+}
+.btn:hover{
+    background-color: transparent;
+    color:#FE2B4A;
+}
+.bgtr{
+    background-color: transparent;
+}
+.section-title{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.section-title h2{
+    font-size:4rem;
+    margin-bottom: 2.5rem;
+}
+.work-section{
+    padding:2rem 0;
+}
+.work-section h4{
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    color:#fff;
+}
+.work-section span{
+    font-size:1.6rem;
+    margin-bottom: 1.4rem;
+}
+.work-section p{
+    color:#fff;
+}
+
+/*=============================================
+                    Hero
+=============================================*/
+#hero{
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0, 0, 0.8)), url(../img/bgbaner.jpg) no-repeat center /cover ;
+    height:100vh;
+    padding: 9rem 0;
+    position:relative;
+ু}
+.logo{
+    float:left;
+}
+.paul{
+    height:5rem;
+}
+.menu{
+    float:right;
+}
+.menu a ion-icon{
+    color:#fff;
+    font-size:4rem;
+    border:.1rem solid #fff;  
+}
+.hero-text-box {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    max-width:100%;
+    width:100%;
+    text-align: center;
+    color:#fff;
+}
+.hero-text-box h1{
+    color:#fff;
+    font-size:7rem;
+    display:inline-block;
+    letter-spacing: .4rem;
+    margin: 3rem 0;
+}
+.hero-text-box h1::before{
+    content: '';
+    display:block;
+    height:.2rem;
+    width:100%;
+    background-color:#fff;
+}
+.hero-text-box h1::after{
+    content: '';
+    display:block;
+    height:.2rem;
+    width:100%;
+    background-color:#fff;
+}
+.hero-text-box span{
+    font-size: 2.6rem;
+    display: block;
+}
+.next-section{
+   text-align: center;
+}
+
+.next-section a ion-icon{
+    position:absolute;
+    bottom:9rem;
+    color:#fff;
+    font-size:4.5rem;
+    animation:5s down infinite ease-in-out;
+}
+@keyframes down{
+    50%{
+        bottom:3rem;
+    }
+}
+#particles-js canvas{
+    position: absolute;
+    top:0;
+    left:0;
+}
+.uk-sticky-fixed {
+    position: fixed;
+    top:0 !important;
+    left:0;
+    background-color: rgba(0,0,0,0.9);
+    padding:1.5rem 0;
+}
+/*=============================================
+                    navbar
+=============================================*/
+.menu-container{
+    background-color: rgba(0, 0, 0, 0.9 );
+    height:100vh;
+    width:0;
+    position: fixed;
+    top:0;
+    left:0;
+    overflow:hidden;
+    z-index:9999;
+}
+.menu-container ul{ 
+    text-align:center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.menu-container ul li {
+    margin:1.5rem 0;
+}
+.menu-container ul li a{
+    color:#fff;
+    font-size: 2.7rem;
+    text-transform: uppercase;
+}
+.menu-container ul li:hover a{
+    color:#FE2B4A;
+    font-size: 3.3rem;
+}
+.close-btn a {
+    position: absolute;
+    right:4.5rem;
+    top:4.5rem;
+}
+.close-btn a ion-icon{
+    color:#fff;
+    font-size:4rem;
+    border:.2rem solid #fff;
+}
+
+/*=============================================
+                    About
+=============================================*/
+.about-grid{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 3rem;
+}
+.about-grid-item{
+    
+}
+.about-img img{
+    width: 100%;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+.about-text h5{
+    font-size:1.8rem;
+}
+.about-text p{
+    text-align:justify;
+    margin-top: 3rem;
+}
+.about-cta-button{
+    margin-top:3.5rem;
+}
+
+/*=============================================
+                    Work
+=============================================*/
+#work{
+    background-color: #F6F6F6;
+}
+.work-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    grid-column-gap: 1rem;
+}
+.work-grid-item{
+    padding:9rem 0;
+
+}
+.work-icon{
+    color:#fff;
+    font-size:4rem;
+    
+}
+.work-grid-item h4{
+    color:#fff;
+    font-size:2rem;
+    padding:0;
+    margin: 0;
+}
+.work-grid-item:nth-child(1){
+    background-color: #002453;
+}
+.work-grid-item:nth-child(2){
+    background-color: #FE2B4A;
+}
+.work-grid-item:nth-child(3){
+    background-color: #11C6FB;
+}
+.work-grid-item:nth-child(4){
+    background-color: #835AEB;
+}
+
+/*=============================================
+                    Experience
+=============================================*/
+#experience{
+    background: #fff url(../img/experience.jpg) no-repeat center/ cover;
+
+}
+.experience-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap:1rem;
+}
+.experience-grid-item{
+    padding:5rem 3rem;
+    color:#fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+}
+.experience-grid-item h3{
+    font-size:2.5rem;
+    color:#fff;
+}
+/*=============================================
+                    Portfolio
+=============================================*/
+#portfolio{
+    background-color: #F6F6F6;
+}
+.portfolio-filter{
+    text-align: center;
+    margin:5rem 0 4rem 0;
+}
+.portfolio-filter button{
+    border:0;
+    padding:.7rem 1rem;
+    font-size:1.6rem;
+    color:#fff;
+    background-color: #000;
+    cursor: pointer;
+    margin:1rem 1rem;
+}
+.portfolio-filter button:hover{
+    background-color: #FE2B4A;
+}
+button.mixitup-control-active{
+    background-color: #FE2B4A;
+}
+.portfolio-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap:1rem;
+}
+.portfolio-grid-item{
+    height:27rem;
+}
+.portfolio-grid-item img{
+    width:100%;
+    height:100%;
+}
+.portfolio-grid-item:nth-child(5){
+    grid-column: 1/3;
+}
+.uk-lightbox-caption{
+    font-size:2rem;
+}
+/*=============================================
+                    Quote
+=============================================*/
+#quote{
+    background: #fff url(../img/testimonial.jpg) no-repeat center top/ cover;
+}
+.quote-grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.quote-img-1{
+    margin-bottom: 5rem;
+}
+.quote-img-1 img{
+    height:3.5rem;
+}
+.quote-grid-item p{
+    width:80%;
+    margin-bottom: 4rem;
+}
+.quote-img-2{
+    margin-bottom: 2rem;
+}
+.quote-img-2 img{
+    height:5rem;
+}
+.quote-grid-item h6{
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+.quote-grid-item span{
+    font-size:1.5rem;
+}
+/*=============================================
+                    Quote
+=============================================*/
+#contact{
+    background: #000 url(../img/contact.jpg) no-repeat center/ cover fixed;
+}
+.contact-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+.contact-grid-item{
+    background: rgba(0, 0, 0, 0.829);
+    padding:5rem 2.5rem;
+}
+.contact-grid-item h3{
+    color:#fff;
+    font-size:3rem;
+    margin-bottom:5rem;
+}
+form input[type="text"],
+form input[type="email"],
+form textarea{
+    width:100%;
+    border:.1rem solid #fff;
+    color:#fff;
+    font-size:1.6rem;
+    background-color: transparent;
+    padding:1.5rem 1rem;
+    margin:1rem 0;
+}
+textarea{
+    height:20rem;
+}
+form input[type="submit"]{
+    float:right;
+    margin-top: 2rem;
+    margin-bottom: 9rem;
+}
+.nested-grid{
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    padding:0;
+}
+.nested-grid-item{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding:5rem 2.5rem;
+}
+.nested-grid-item p{
+    color:#fff;
+
+}
+/*=============================================
+                    Footer
+=============================================*/
+#footer{
+    background-color:#222;
+    padding:5rem 0;
+    text-align: center;
+}
+.social-icon ul li{
+    display:inline-block;
+    list-style: none; 
+}
+.social-icon ul li a{
+    color:#fff;
+    font-size:3rem;
+
+}
+.social-icon ul li a ion-icon{
+    border-right:.1rem solid #fff;
+    padding:0 1rem;
+}
+.social-icon ul li:nth-child(4) ion-icon{
+    border: 0;
+}
+.social-icon ul li a:hover{
+    color:rgb(243, 65, 65);
+}
+.copyright-text{
+    margin:2rem 0;
+    color:#fff;
+    font-size:1.4rem;
+}
+.upper-section a{
+    color:#fff;
+    font-size:4rem;
+}
+.upper-section a ion-icon:hover{
+    color:#000;
+    background-color: #fff;
+}
+
